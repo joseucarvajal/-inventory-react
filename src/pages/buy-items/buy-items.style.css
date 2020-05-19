@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.buy-items-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;    
+}
+
+.buy-items-header {
+    flex: 0 0 15%;
+}
+
+
+.buy-items-section {    
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    padding: .5rem;
+}
+
+.buy-items-footer {
+    flex: 0 0 15%;
+}
+
+.bordered-element {
+    border: 1px red solid;
+}
