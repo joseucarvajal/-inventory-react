@@ -7,23 +7,25 @@ import './itemcategory.style.css';
 
 const ItemCategory = (props) => {
 
+    const { name, products } = props.category;    
     const { showInStock } = props;
+    
+    const [selectedItem, setSelectecItem] = useState(null);
 
-    useEffect(()=>{        
-        if(showInStock){
-            if(selectedItem !== null && selectedItem.stock <= 0){
+    useEffect(() => {
+        if (showInStock) {
+            if (selectedItem !== null && selectedItem.stock <= 0) {
                 setSelectecItem(null);
             }
         }
     }, [showInStock]);
 
-    const [selectedItem, setSelectecItem] = useState(null);
 
     return (
         <div className="item-category">
-            <span className="item-category__name">{props.category.name}</span>
+            <span className="item-category__name">{name}</span>
             <div>
-                {props.category.products.map((product, i) => {
+                {products.map((product, i) => {
                     return (
                         <div key={product.id} onClick={() => {
                             setSelectecItem(product);
