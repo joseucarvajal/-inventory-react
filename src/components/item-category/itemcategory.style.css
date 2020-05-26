@@ -1,4 +1,12 @@
-.item-category{
-    font-weight: bolder;
+.item-category{    
     border: 1px solid aqua;
+}
+
+.table-row {
+    
+}
+
+.table-row:hover {
+    background-color: #CCC;
+    cursor: pointer;
 }

@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ItemSearch = (props) => {
+
+    const [showInStock, setShowInStock] = useState(false);
+
+    const { onShowInStockChanged } = props;
+
     return (
         <div className="item-search">
             <form>
@@ -8,8 +13,16 @@ const ItemSearch = (props) => {
                     <input type="text" placeholder="Search..." />
                 </div>
                 <div>
-                    <input type="checkbox"/> Only show products in stock
-                </div>
+                    <input
+                        checked={showInStock}
+                        type="checkbox"
+                        id="check-show-in-stock"
+                        onChange={(e) => {                             
+                            setShowInStock(e.target.checked);                            
+                            onShowInStockChanged(e.target.checked);
+                        }} />
+                    <label htmlFor="check-show-in-stock">Only show products in stock</label>
+                    </div>
             </form>
         </div>
     );
