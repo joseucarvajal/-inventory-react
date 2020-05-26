@@ -1,5 +1,6 @@
 .item-category{    
     border: 1px solid aqua;
+    margin-bottom: 15px;
 }
 
 .table-row {
@@ -9,4 +10,8 @@
 .table-row:hover {
     background-color: #CCC;
     cursor: pointer;
+}
+
+.item-category__name {
+    font-weight: bold;
 }

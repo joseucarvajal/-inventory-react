@@ -21,7 +21,7 @@ const ItemCategory = (props) => {
 
     return (
         <div className="item-category">
-            {props.category.name}
+            <span className="item-category__name">{props.category.name}</span>
             <div>
                 {props.category.products.map((product, i) => {
                     return (
