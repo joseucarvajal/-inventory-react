@@ -36,7 +36,7 @@ const ItemCategory = (props) => {
             {
                 selectedItem !== null
                     ? (<div>
-                        <table border="1">
+                        <table border="1" width="100%">
                             <thead>
                                 <tr>
                                     <th>Name</th>

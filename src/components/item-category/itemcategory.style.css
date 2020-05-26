@@ -3,10 +3,6 @@
     margin-bottom: 15px;
 }
 
-.table-row {
-    
-}
-
 .table-row:hover {
     background-color: #CCC;
     cursor: pointer;
